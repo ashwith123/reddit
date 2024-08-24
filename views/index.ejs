@@ -7,5 +7,11 @@
   </head>
   <body>
     <h1 style="color: rgb(255, 85, 0)">reddit</h1>
+    <% for(post of posts){ %>
+    <div class="post_div">
+      <h3 class="username">@<%=post.username%></h3>
+      <h4 class="content"><%=post.content%></h4>
+    </div>
+    <% } %>
   </body>
 </html>

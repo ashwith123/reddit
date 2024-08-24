@@ -20,7 +20,7 @@ app.use(
   express.static(path.join(__dirname, "public"))
 ); /*tells to check for images which are static in public folder located in same directory*/
 
-let post = [
+let posts = [
   {
     username: "ash",
     content: " I love coding",
@@ -32,7 +32,7 @@ let post = [
 ];
 
 app.get("/viewposts", (req, res) => {
-  res.render("index.ejs");
+  res.render("index.ejs", { posts });
 });
 
 app.listen(port, () => {
