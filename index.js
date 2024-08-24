@@ -32,7 +32,13 @@ let posts = [
 ];
 
 app.get("/viewposts", (req, res) => {
+  /*renders view page*/
   res.render("index.ejs", { posts });
+});
+
+app.get("/newpost", (req, res) => {
+  /*renders newpost page */
+  res.render("new.ejs");
 });
 
 app.listen(port, () => {

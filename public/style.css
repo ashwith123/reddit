@@ -1,0 +1,12 @@
+body {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+div:hover {
+  background-color: rgb(49, 57, 61);
+}
+
+h1 {
+  color: red;
+}

@@ -4,13 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>all posts</title>
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
-    <h1 style="color: rgb(255, 85, 0)">reddit</h1>
+    <h1>reddit</h1>
     <% for(post of posts){ %>
     <div class="post_div">
-      <h3 class="username">@<%=post.username%></h3>
-      <h4 class="content"><%=post.content%></h4>
+      <h3 class="username">Username: <%=post.username%></h3>
+      <h4 class="content">Description:<%=post.content%></h4>
+      <hr />
     </div>
     <% } %>
   </body>
