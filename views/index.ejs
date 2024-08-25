@@ -10,7 +10,12 @@
   </head>
   <body>
     <h1>reddit</h1>
-
+    <a href="/viewposts/new"
+      ><button style="color: white; background-color: red; text-align: center">
+        CLICK HERE TO CREATE NEW POST
+      </button></a
+    >
+    <hr />
     <% for(post of posts){ %>
     <div class="post_div">
       <h3 class="username">Username:@ <%=post.username%></h3>
