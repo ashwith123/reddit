@@ -22,18 +22,26 @@ app.use(
 
 let posts = [
   {
+    id: "1a",
     username: "@ash",
     content: " I love coding",
     imgurl:
       "https://imgs.search.brave.com/JEm7-kU7IBWtUlnJR7-0-uQirT8ns-EwNbRvc0ou_N0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMxLnNyY2RuLmNv/bS93b3JkcHJlc3Mv/d3AtY29udGVudC91/cGxvYWRzLzIwMjQv/MDMvcm9iZXJ0LXBh/dHRpbnNvbi1hcy1i/cnVjZS13YXluZS1p/bi1mdWxsLWJhdG1h/bi1jb3N0dW1lLWlu/LWdjcGQtaHEtaW4t/dGhlLWJhdG1hbi5q/cGc",
   },
   {
+    id: "2a",
     username: "@dream",
     content: " i like dreaming",
     imgurl:
       "https://imgs.search.brave.com/GKx3mkambU5Vau6fJsleYH1LfgsIXjUG70N_-0Fpm-o/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9nbWVk/aWEucGxheXN0YXRp/b24uY29tL2lzL2lt/YWdlL1NJRVBEQy9z/cGlkZXItbWFuLTIt/c2NyZWVuc2hvdC1i/bGFja3N1aXQtZW4t/MjVtYXkyMy5qcGc_/JDEwMHB4JA",
   },
 ];
+
+app.get("/viewposts/:id", (req, res) => {
+  let { id } = req.params;
+  let post = posts.find((p) => id === p.id);
+  res.render("show.ejs", { post });
+});
 
 app.get("/viewposts", (req, res) => {
   /*renders view page*/
