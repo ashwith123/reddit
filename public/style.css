@@ -3,6 +3,11 @@ body {
   color: white;
 }
 
+img {
+  height: 200px;
+  width: auto;
+}
+
 div:hover {
   background-color: rgb(49, 57, 61);
 }

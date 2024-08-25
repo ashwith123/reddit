@@ -10,24 +10,11 @@
     />
   </head>
   <body>
-    <form method="post">
-      <div class="form-group">
-        <label for="username">username</label>
-        <input
-          class="form-control"
-          id="username"
-          placeholder="Enter username"
-        />
-      </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input
-          type="password"
-          class="form-control"
-          id="password"
-          placeholder="Password"
-        />
-      </div>
+    <form method="post" action="/viewposts">
+      <input placeholder="entter username" name="username" /><br />
+      <textarea placeholder="write about your post" name="content"></textarea
+      ><br /><br>
+      <input placeholder="enter image adress here" name="imgurl"></input>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
   </body>

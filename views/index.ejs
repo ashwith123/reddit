@@ -1,3 +1,5 @@
+<!-- this is the main page which is showed when you go to /viewposts as it redirects you-->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,12 +10,23 @@
   </head>
   <body>
     <h1>reddit</h1>
+
     <% for(post of posts){ %>
     <div class="post_div">
-      <h3 class="username">Username: <%=post.username%></h3>
+      <h3 class="username">Username:@ <%=post.username%></h3>
       <h4 class="content">Description:<%=post.content%></h4>
+      <img src="<%=post.imgurl %>" alt="img adress not found" />
       <hr />
     </div>
     <% } %>
+    <div style="text-align: center">
+      <a href="/viewposts/new"
+        ><button
+          style="color: white; background-color: red; text-align: center"
+        >
+          NEW POST
+        </button></a
+      >
+    </div>
   </body>
 </html>
